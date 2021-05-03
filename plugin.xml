@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="screenshot-plugin"
+    version="1.0.0">
+    <name>screenshot plugin</name>
+    <description></description>
+    <license>MIT</license>
+    <keywords></keywords>
+    
+
+    <!-- android -->
+    <platform name="android">
+      <js-module src="www/plugin.js" name="plugin">
+        <runs/>
+
+        <!-- Este es el nombre por el cual se accedera el plugin -->
+        <clobbers target="ScreenshotPG" />
+      </js-module>
+      <config-file target="res/xml/config.xml" parent="/*">
+        <feature name="ScreenshotPG">
+          <param name="android-package" value="org.banrural.ScreenshotPG" />
+          <param name="onload" value="true" />
+        </feature>
+      </config-file>
+
+      <source-file src="src/android/org/banrural/ScreenshotPG.java" target-dir="src/org/banrural/" />
+      <framework src="src/android/ScreenshotPG.gradle" custom="true" type="gradleReference"/>
+    </platform>
+
+</plugin>

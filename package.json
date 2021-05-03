@@ -1,0 +1,11 @@
+{
+  "name": "cordova-plugin-screenshot",
+  "version": "1.0.0",
+  "cordova": {
+    "id": "cordova-plugin-screenshot",
+    "platforms": [
+      "android"
+    ]
+  },
+  "description": "Plugin para guardar capturas de pantalla en Android versión 11"
+}
